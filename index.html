@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- Đầu -->
     <header>
       <div class="max-w-5xl mx-auto px-5">
-          <ul class="flex justify-end font-bold text-[20px] space-x-6 py-4">
-            <li><a class="hover:text-red-400" href="work.html">Works</a></li>
+        <div class="flex justify-end">
+          <button id="button" class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mt-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+          <ul id="menu" class="md:flex pl-4   md:justify-end font-bold text-[20px] md:space-x-6 py-4 hidden ">
+            <li><a class="hover:text-red-400 " href="work.html">Works</a></li>
             <li><a class="hover:text-red-400" href="blog.html">Blog</a></li>
-            <li><a class="hover:text-red-400" href="index.html">Contact</a></li>
+            <li><a class="hover:text-red-400" id="active" href="index.html">Contact</a></li>
           </ul>
       </div>
     </header>
@@ -22,9 +30,9 @@
     <!-- p1 -->
     <section class="info">
       <div class="max-w-5xl mx-auto px-5 mt-40">
-        <div class="grid md:grid-cols-3">
+        <div class="grid md:grid-cols-3 text-center md:text-justify">
           <div class="md:col-span-2 order-2 md:order-1 py-10">
-            <h1 class="text-[44px] font-bold mb-5 leading-[60px]">Hi, I am John, <br>
+            <h1 class="text-[32px] md:text-[44px] font-bold mb-5 leading-[60px]">Hi, I am John, <br>
               Creative Technologist</h1>
               <p class="text-[16px] mb-9">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet <br> sint.
                  Velit officia consequat duis enim velit mollit. Exercitation veniam <br> consequat sunt nostrud amet.</p>
@@ -37,11 +45,11 @@
       </div>
     </section>
     <!-- p2 -->
-    <section class="info2 bg-[#EDF7FA] py-10">
+    <section class="info2 bg-[#EDF7FA] md:py-10 ">
       <div class="max-w-5xl mx-auto px-5 ">
-        <div class="flex justify-between">
-          <h2 class="text-[22px]">Recent posts</h2>
-          <a class="text-[#00A8CC] mb-10" href="">View all</a>
+        <div class="md:flex justify-between md:text-justify  text-center py-5">
+          <h2 class="text-[22px] ">Recent posts</h2>
+          <a class="text-[#00A8CC] mb-10 hidden md:block" href="">View all</a>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
           <!-- 1 -->
@@ -52,7 +60,7 @@
               <span>|</span>
               <span>Design, Pattern</span>
             </div>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+            <p class="text-base">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
               Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
           </div>
           <!-- 2 -->
@@ -63,7 +71,7 @@
               <span>|</span>
               <span>Design, Pattern</span>
             </div>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+            <p class="text-base">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
               Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
           </div>
         </div>
@@ -73,8 +81,8 @@
     <section class="info3 mt-5">
       <div class="max-w-5xl mx-auto px-5">
         <!-- 1 -->
-        <div class="flex justify-between">
-          <h2 class="text-[22px] mb-8">Featured works</h2>
+        <div class="md:flex justify-between md:text-justify text-center">
+          <h2 class="text-[22px] mb-8 ">Featured works</h2>
         </div>
         <div class="grid md:grid-cols-[246px,auto] gap-8 border-b py-8">
           <div class="" >
@@ -91,7 +99,7 @@
           </div>
         </div>
         <!-- end -->
-        <div class="grid md:grid-cols-[246px,auto] gap-8 border-b py-8">
+        <div class="md:grid md:grid-cols-[246px,auto] gap-8 border-b py-8 md:block hidden">
           <div class="" >
             <img class="w-[246px] w-full h-[180px]" src="https://res.cloudinary.com/fashsion-brand/image/upload/v1654602680/Rectangle_32_rghri6.jpg" alt="">
           </div>
@@ -106,7 +114,7 @@
           </div>
         </div>
         <!-- end -->
-        <div class="grid md:grid-cols-[246px,auto] gap-8 border-b py-8">
+        <div class="md:grid md:grid-cols-[246px,auto] gap-8 border-b py-8 hidden md:block">
           <div class="" >
             <img class="w-[246px] w-full h-[180px]" src="https://res.cloudinary.com/fashsion-brand/image/upload/v1654602680/Rectangle_34_tutcr6.jpg" alt="">
           </div>
@@ -143,6 +151,6 @@
       <p class="flex justify-center mt-2 mb-8">Copyright ©2020 All rights reserved </p>
     </div>
    </footer>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js"> </script>
   </body>
 </html>

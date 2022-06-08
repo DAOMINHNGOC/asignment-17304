@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- 1 -->
-    <div class=" flex max-w-4xl mx-auto mt-10 inline-block justify-end space-x-4 font-bold px-5">
-      <a class="hover:text-red-400" href="work.html">Works</a>
-      <a class="hover:text-red-400" href="blog.html">Blog</a>
-      <a class="hover:text-red-400" href="index.html">Contact</a>
-  </div>
+    <!-- Đầu -->
+    <header>
+      <div class="max-w-5xl mx-auto px-5">
+        <div class="flex justify-end">
+          <button id="button" class=" flex justify-end block md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mt-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+          <ul id="menu" class="md:flex justify-end font-bold text-[20px] md:space-x-6 py-4 hidden md:block">
+            <li><a class="hover:text-red-400" href="work.html">Works</a></li>
+            <li><a class="hover:text-red-400" id="active" href="blog.html">Blog</a></li>
+            <li><a class="hover:text-red-400" href="index.html">Contact</a></li>
+          </ul>
+      </div>
+    </header>
     <!-- 2 -->
     <div class="max-w-4xl mx-auto mt-20 px-5 px-5">
         <!-- 2.1 -->
@@ -79,6 +91,6 @@
       </div>
       <p class="flex justify-center mt-4">Copyright ©2020 All rights reserved </p>
     </div>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/blog.js"></script>
   </body>
 </html>
