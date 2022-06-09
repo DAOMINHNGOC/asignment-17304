@@ -9,7 +9,7 @@ module.exports = defineConfig({
         main: resolve(__dirname, 'index.html'),
         work: resolve(__dirname, 'work.html'),
         blog: resolve(__dirname, 'blog.html'),
-        nested: resolve(__dirname, 'nested/index.html')
+       products: resolve(__dirname, 'products.html'),
       }
     }
   }
