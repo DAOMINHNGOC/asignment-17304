@@ -40,7 +40,7 @@ function showProducts(products) {
         result += `
         <div class="grid md:grid-cols-[246px,auto] gap-8 leading-[30px] space-y-8 py-3 border-b py-7  ">
         <div class="product-img" >
-            <a  href="./detail.html?id=${product.id}">
+            <a  href="./products.html?id=${product.id}">
                 <img class="w-full hover:border-4 hover:rounded-xl hover:border-blue-500 md:h-[200px] md:w-[246px]" src="${product.img}" alt="" />
             </a>
         </div>
